@@ -28,6 +28,7 @@ This utility streams logs from a Docker container to AWS CloudWatch, providing a
     ```
     git clone https://github.com/maryia-galetskaya/test_task_CloudWatch-logging.git`
     ```
+    
     ```
     cd test_task_CloudWatch-logging
     ```
