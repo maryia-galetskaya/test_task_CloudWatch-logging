@@ -48,11 +48,11 @@ python -m venv venv
 
 ### 3. Install required Python dependencies:
 
-    ```
-    pip install -r requirements.txt
-    ```
+```
+pip install -r requirements.txt
+```
 
-    This script requires *boto3* and *docker* Python packages.
+This script requires *boto3* and *docker* Python packages.
 
 ## Configuration
 
@@ -83,7 +83,8 @@ Run the script with the necessary arguments:
 python main.py --docker-image python --bash-command $'pip install pip -U && pip install tqdm && python -c \"import time\ncounter = 0\nwhile True:\n\tprint(counter)\n\tcounter = counter + 1\n\ttime.sleep(0.1)\"' --aws-cloudwatch-group test-task-group-1 --aws-cloudwatch-stream test-task-stream-1 --aws-access-key-id <AWS-ACCESS-KEY> --aws-secret-access-key <AWS-SECRET-ACCESS-KEY> --aws-region <AWS-REGION>
 ```
 
-
+<br>
+<br>
 
 
 - The script is designed to handle __*KeyboardInterrupt*__ `(Ctrl+C)` gracefully, ensuring that any logs generated up to the point of interruption are sent to `CloudWatch` before the program exits.
