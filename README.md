@@ -25,7 +25,7 @@ This utility streams logs from a Docker container to AWS CloudWatch, providing a
 
 ### 1. Clone the repository to your local machine:
 ```
-git clone https://github.com/maryia-galetskaya/test_task_CloudWatch-logging.git`
+git clone https://github.com/maryia-galetskaya/test_task_CloudWatch-logging.git
 ```
 ```
 cd test_task_CloudWatch-logging
