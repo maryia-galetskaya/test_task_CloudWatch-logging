@@ -23,7 +23,7 @@ This utility streams logs from a Docker container to AWS CloudWatch, providing a
 
 ## Installation
 
-1. Clone the repository to your local machine:
+### 1. Clone the repository to your local machine:
 
     ```
     git clone https://github.com/maryia-galetskaya/test_task_CloudWatch-logging.git`
@@ -32,8 +32,22 @@ This utility streams logs from a Docker container to AWS CloudWatch, providing a
     cd test_task_CloudWatch-logging
     ```
 
+### 2. Set Up a Virtual Environment
+Create and activate a virtual environment to manage the project's Python dependencies independently from your global Python environment.
 
-2. Install required Python dependencies:
+For macOS/Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+For Windows:
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+### 3. Install required Python dependencies:
 
     ```
     pip install -r requirements.txt
@@ -68,6 +82,7 @@ Run the script with the necessary arguments:
 
 ```
 python main.py --docker-image python --bash-command $'pip install pip -U && pip install tqdm && python -c \"import time\ncounter = 0\nwhile True:\n\tprint(counter)\n\tcounter = counter + 1\n\ttime.sleep(0.1)\"' --aws-cloudwatch-group test-task-group-1 --aws-cloudwatch-stream test-task-stream-1 --aws-access-key-id <AWS-ACCESS-KEY> --aws-secret-access-key <AWS-SECRET-ACCESS-KEY> --aws-region <AWS-REGION>
+
 ```
 
 
